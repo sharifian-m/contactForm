@@ -1,0 +1,43 @@
+<header >
+  <div class="container-fluid  text-white bg-dark p-3">
+<nav class="d-flex align-items-center justify-content-between ">
+  <div> 
+        <ul class="d-flex justify-content-between navbar-nav">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              aria-current="page"
+              [routerLink]="['/home']"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Home</a
+            >
+          </li>
+        </ul>
+      </div>
+    <div>
+        <ul class="d-flex justify-content-between navbar-nav">
+          <li class="nav-item" *ngIf="!userlogined" >
+            <a  
+              class="nav-link"
+              [routerLink]="['/signup']"
+              routerLinkActive="active"
+              >login/SignUp</a
+            >
+          </li>
+          <li class="nav-item"  *ngIf="userlogined" (click)="signOut()">
+            <a 
+              class="nav-link"
+              >SignOut</a
+            >
+          </li>
+          <li class="nav-item">
+            <p *ngIf="authService.currentUser$|async"
+            >  {{authService.currentUser$|async}}</p>
+          </li> 
+        </ul>
+      </div>
+ 
+</nav>
+</div>
+</header>

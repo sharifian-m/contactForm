@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffffff;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-weight: 900;
+}
+.Container2{
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 16px;
+   flex-direction: column;
+}
+.box{
+    background-color: #035555;;
+    width: 400px;
+    height:500px ;
+    padding: 25px;
+  border-radius: 30px;
+ 
+}
+.user{
+    padding: 15px 10px;  
+    font-size: 16px;
+    margin-top: 20px;
+}
+.fas{
+    width: 25px;
+    height: 25px;
+position: relative;
+
+}
+input{
+    width:90%;
+    padding:0 25px 12px;
+    margin-bottom: 15px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    border-bottom: 1px solid rgb(64, 162, 147);
+    background-color: #035555;
+    color: #ffffff;
+
+}
+input:focus{
+    border-bottom: 1px solid #ffff;
+}
+.login-btn{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.btn{
+    width: 80%;
+    border-radius: 30px;
+    border: none;
+    padding: 5px 10px;
+    color:#035555;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 10px;
+
+}
+.sign-up span{
+    color: #093129;
+}
+.sign-up span:hover{
+    color: #ccf597;
+}

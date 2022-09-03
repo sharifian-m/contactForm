@@ -1,0 +1,15 @@
+<p>contact-form component!</p>
+<form [formGroup]="myForm" (ngSubmit)="submit()">
+    <label>ID number:
+        <input type="number" formControlName="ID" >
+
+    </label><br>
+    
+<label >Fullname:  &nbsp;
+<input type="text" formControlName="FullName">
+</label><br>
+<label >Phone NO:  
+<input type="text" formControlName="Mobile">
+</label><br><br>
+<button type="submit" style="background-color: rgb(2, 92, 2);color:white">Add contact</button>
+</form>

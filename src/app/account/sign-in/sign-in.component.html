@@ -1,0 +1,26 @@
+<div class="Container2">
+    <div class="box">
+      <h1>SignIn</h1>
+      <form [formGroup]="signInForm" (ngSubmit)="submitForm()">
+        <div class="user">
+         
+          <img class="fas" src="./assets/email-sign.png" alt="" /><input
+            formControlName="email"
+            type="email"
+            placeholder="Email Addres"
+          />
+          <img class="fas" src="./assets/forgot-password.png" alt="" /><input
+            formControlName="password"
+            type="password"
+            placeholder="Password"
+          />
+         
+        </div>
+        <div class="login-btn">
+          <button class="btn btn-success" type="submit">Submit</button>
+          <p class="sign-up">Already have an account?<span> Sign In</span></p>
+        </div>
+      </form>
+    </div>
+  </div>
+  

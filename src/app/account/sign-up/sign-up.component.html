@@ -1,0 +1,33 @@
+<div class="Container2">
+  <div class="box">
+    <h1>Sign Up</h1>
+    <form [formGroup]="signUpForm" (ngSubmit)="submitForm()">
+      <div class="user">
+        <img class="fas" src="./assets/name.png" alt="" /><input
+          formControlName="fullName"
+          type="text"
+          placeholder="Full Name"
+        />
+        <img class="fas" src="./assets/email-sign.png" alt="" /><input
+          formControlName="email"
+          type="email"
+          placeholder="Email Addres"
+        />
+        <img class="fas" src="./assets/forgot-password.png" alt="" /><input
+          formControlName="password"
+          type="password"
+          placeholder="Password"
+        />
+        <img class="fas" src="./assets/forgot-password.png" alt="" /><input
+          formControlName="confirmPassword"
+          type="password"
+          placeholder="Confirm Password"
+        />
+      </div>
+      <div class="login-btn">
+        <button class="btn btn-success" type="submit">Submit</button>
+        <p class="sign-up">Already have an account? <a routerLink="/signIn"><span> Sign In</span></a></p>
+      </div>
+    </form>
+  </div>
+</div>
