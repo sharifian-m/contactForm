@@ -11,6 +11,8 @@ import { LayoutsModule } from './layouts/layouts.module';
 import { AccountModule } from './account/account.module';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
+import { AuthGuardService } from './shared/auth-guard.service';
+import { MoreComponent } from './pages/more/more.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { HomeComponent } from './pages/home/home.component';
     ContactFormComponent,
     ContactListComponent,
     ContactSummeryComponent,
-    HomeComponent
+    HomeComponent,
+    MoreComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,7 @@ import { HomeComponent } from './pages/home/home.component';
     AccountModule
   ],
   exports:[HomeComponent],
-  providers: [],
+  providers: [AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

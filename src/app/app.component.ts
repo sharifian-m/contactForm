@@ -1,5 +1,5 @@
 import { ContactListComponent } from './pages/contact-list/contact-list.component';
-import { contactDto } from './contact.model';
+import { contactDto } from './shared/models/contact.model';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { AuthService } from './shared/auth.service';
 // import { ContactService } from './contact.service';

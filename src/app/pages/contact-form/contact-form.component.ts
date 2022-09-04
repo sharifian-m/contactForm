@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { contactDto } from '../../contact.model';
+import { contactDto } from '../../shared/models/contact.model';
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',

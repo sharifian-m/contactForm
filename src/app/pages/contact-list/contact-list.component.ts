@@ -1,4 +1,4 @@
-import { contactDto } from '../../contact.model';
+import { contactDto } from '../../shared/models/contact.model';
 import {
   Component,
   Injectable,
