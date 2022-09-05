@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SignUpComponent } from './account/sign-up/sign-up.component';
+import { AuthGuardService } from './core/servises/auth-guard.service';
 import { HomeComponent } from './pages/home/home.component';
 import { MoreComponent } from './pages/more/more.component';
-import { AuthGuardService } from './shared/auth-guard.service';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },

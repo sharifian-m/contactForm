@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ContactListComponent } from '../contact-list/contact-list.component';
-import { ContactService } from '../../contact.service';
+import { ContactService } from '../../core/servises/contact.service';
 
 @Component({
   selector: 'app-contact-summery',

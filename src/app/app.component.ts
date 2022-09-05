@@ -1,8 +1,7 @@
 import { ContactListComponent } from './pages/contact-list/contact-list.component';
-import { contactDto } from './shared/models/contact.model';
+import { contactDto } from './core/models/contact.model';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { AuthService } from './shared/auth.service';
-// import { ContactService } from './contact.service';
+import { AuthService } from './core/servises/auth.service';
 
 @Component({
   selector: 'app-root',

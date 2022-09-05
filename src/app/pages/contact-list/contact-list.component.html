@@ -1,4 +1,11 @@
 <p>contact-list component!</p>
+<div class="mx-4 my-3"> <label
+    >filter: <input  type="text" [(ngModel)]="filterstring"  > </label
+    ><br /></div>
+    <div class="d-flex">
+        
+
+    </div>
 <table style="border: 1px;">
     <thead>
         <tr>
@@ -9,7 +16,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let contact of Contacts">
+        <tr *ngFor="let contact of Contacts | filter:filterstring:'FullName'">
             <td>{{contact.ID}}</td>
             <td>{{contact.FullName}}</td>
             <td>{{contact.Mobile}}</td>

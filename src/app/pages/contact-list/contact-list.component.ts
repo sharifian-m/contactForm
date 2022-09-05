@@ -1,4 +1,4 @@
-import { contactDto } from '../../shared/models/contact.model';
+import { contactDto } from '../../core/models/contact.model';
 import {
   Component,
   Injectable,
@@ -10,7 +10,7 @@ import {
   EventEmitter,
 } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { ContactService } from '../../contact.service';
+import { ContactService } from '../../core/servises/contact.service';
 import { ContactSummeryComponent } from '../contact-summery/contact-summery.component';
 
 //  @Injectable({ providedIn: 'root' })
@@ -21,9 +21,11 @@ import { ContactSummeryComponent } from '../contact-summery/contact-summery.comp
 })
 export class ContactListComponent implements OnInit, AfterViewInit {
   Contacts: contactDto[] = [];
+  ContactsList: contactDto[] =[];
+  
 @Input() item!:contactDto;
 @Output() editItem=new EventEmitter<contactDto>();
-
+filterstring:string='';
   constructor(private contactservice: ContactService) {}
   ngAfterViewInit(): void {
     // this.Contacts.push(new contactDto({ FullName: 'Seamorgh', ID: 1, Mobile: '02122050495' }));
@@ -37,6 +39,7 @@ export class ContactListComponent implements OnInit, AfterViewInit {
     this.Contacts= [...this.Contacts,contact];
     console.log(' this.Contacts Array=',this.Contacts);
     this.contactCount();
+    this.ContactsList= [...this.Contacts];
     //TODO: Set contactService value with this.Contacts.length
   }
   deleteRow(contact: contactDto) {
